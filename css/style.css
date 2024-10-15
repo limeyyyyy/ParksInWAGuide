@@ -44,7 +44,7 @@ h1 {
   }
   
   ul.nav a:hover {
-    background-color: rgb(2, 87, 87);
+    background-color: rgb(4, 65, 2);
     color: white;
   }
   .active { /* Fred learned how to differentiate active page */
