@@ -1,42 +1,57 @@
-body{
-    background-color: aliceblue;
-}
-
-.centeredimage{
-    display: block;
-    margin:10px auto;
-}
-.navmenu{
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    padding: 20px;
+    background-color: #e0f7fa; 
+    border: 2px solid #00796b; 
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#3e2104;
+  }
+  
+  .navmenu{
     grid-column: 1 / span 3;
     grid-row: 1;
-}
-
-.nav {
+  }
+  
+  .nav {
     list-style-type: none;
     background-color: darkcyan;
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-ul.nav li {
+  }
+  ul.nav li {
     float: left;
-}
-
-ul.nav li a {
-    display: block;
-    padding: 8px 16px;
-    color: black;
+  }
+  
+  .nav li a {
+    color: white;
     text-decoration: none;
-}
-ul.nav a:hover {
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #004d40;
+    border-radius: 15px;
+  }
+  
+  ul.nav a:hover {
     background-color: rgb(2, 87, 87);
     color: white;
-}
-.active {
+  }
+  .active { /* Fred learned how to differentiate active page */
     background-color: aqua;
-}
-
-.footer {
+  }
+  
+  .footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -45,57 +60,62 @@ ul.nav a:hover {
     color: white;
     text-align: center;
   }
-  /* Container for the grid */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column grid (each item is full width) */
-  grid-gap: 1rem; /* Adjust the spacing between items */
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-/* Each grid item */
-.grid-item {
-  display: flex; /* Use flex to align text and image in a row */
-  background-color: #f0f0f0; /* Example background color */
-  padding: 20px;
-  border: 1px solid #ccc; /* Border to highlight the grid items */
-  box-sizing: border-box;
-}
-
-/* Text section inside the grid item */
-.grid-text {
-  width: 66%; /* Takes up 66% of the width */
-  padding-right: 1rem; /* Space between text and image */
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the text vertically */
-}
-
-/* Image section inside the grid item */
-.grid-image {
-  width: 33%; /* Takes up 33% of the width */
-}
-
-.grid-image img {
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Keep the aspect ratio */
-}
-
-/* Responsive adjustments (for small screens) */
-@media (max-width: 768px) {
-  .grid-item {
-    flex-direction: column; /* Stack the text and image vertically on small screens */
-  }
-
-  .grid-text, .grid-image {
-    width: 100%; /* Each section takes full width on small screens */
-  }
-
-  .grid-text {
-    padding-right: 0; /* Remove padding on small screens */
-  }
-}
+  
+  .grid-container {
+      display: grid;
+      grid-template-columns: 1fr; 
+      grid-gap: 1rem; 
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    
+    
+    .grid-item {
+      display: flex; 
+      background-color: #064917;
+      padding: 20px;
+      border: 1px solid #ccc; 
+      box-sizing: border-box;
+    }
+    
+  
+    .grid-text { /* I learned about getting text to flow better in this section with things like border box and flex directions */
+      width: 66%;
+      background-color: #fff3e0;
+      padding: 1rem;
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+   
+    .grid-image { /* fred learned about shading and creating soft edges on grid boxes, this was not something that I knew before */
+      width: 33%;
+      background-color: #e0f7fa;
+      padding: 1rem; /* I learned about using rem as a measurement */
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* I learned about making shadows on boxes */
+    }
+    
+    
+    .grid-image img { /*I learned about how to get the image to fit properly in its designated section */
+      width: 100%; 
+      height: auto; 
+    }
+    
+    h3 {
+      text-align: left;
+      font-family: Arial;
+      color:#064917
+    }
+    
+    .video-section { 
+      display: flexbox;
+      justify-content: center;  
+      align-items: center;
+  }  
