@@ -1,138 +1,121 @@
-body{
-    background-color: #7d9b67;
-}
-
-h1{
+h1 {
     text-align: center;
-    font-size: 30px;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
     padding: 20px;
-    background-color: #578139;
-
-    font-family: "bomboniere", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.grid-container{
-    display:grid;
-    grid-gap: 10px;
-    grid-template-columns: 33.333% 33.333% 33.333%;
-}
-
-.grid-item{
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    background-color: #3f7041;
-
-    font-family: "bomboniere", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.centeredimage{
-    display: block;
-    margin:10px auto;
-}
-.navmenu{
+    background-color: #e0f7fa; 
+    border: 2px solid #00796b; 
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#3e2104;
+  }
+  
+  .navmenu{
     grid-column: 1 / span 3;
     grid-row: 1;
-}
-
-.nav {
+  }
+  
+  .nav {
     list-style-type: none;
-    background-color: #578139;
+    background-color: darkcyan;
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-ul.nav li {
+  }
+  ul.nav li {
     float: left;
-}
-
-ul.nav li a {
-    display: block;
-    padding: 8px 16px;
-    color: black;
-    text-decoration: none;
-}
-ul.nav a:hover {
-    background-color: #445b3a;
+  }
+  
+  .nav li a {
     color: white;
-}
-.active {
-    background-color: #91a97c;
-}
-
-
-.topic1title{
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.topic1text{
-    grid-column: 2 / span 2;
-    grid-row:  2 / span 3;
-}
-
-.topic1img{
-    grid-column: 1;
-    grid-row: 3 / span 2;
-}
-
-.topic2title{
-    grid-column: 3;
-    grid-row: 5;
-}
-
-.topic2text{
-    grid-column: 1 / span 2;
-    grid-row:  5 / span 3;
-}
-
-.topic2img{
-    grid-column: 3;
-    grid-row: 6 / span 2;
-}
-
-.topic3title{
-    grid-column: 1;
-    grid-row: 8;
-}
-
-.topic3text{
-    grid-column: 2 / span 2;
-    grid-row:  8 / span 3;
-}
-
-.topic3img{
-    grid-column: 1;
-    grid-row: 9 / span 2;
-}
-
-.topic4title{
-    grid-column: 3;
-    grid-row: 12;
-}
-
-.topic4text{
-    grid-column: 1 / span 2;
-    grid-row: 12/ span 3;
-}
-
-.topic4img{
-    grid-column: 3;
-    grid-row: 13 / span 2;
-}
-
-
-.footer {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #004d40;
+    border-radius: 15px;
+  }
+  
+  ul.nav a:hover {
+    background-color: rgb(2, 87, 87);
+    color: white;
+  }
+  .active { /* Fred learned how to differentiate active page */
+    background-color: aqua;
+  }
+  
+  .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #5c5a45;
-    color: black;
+    background-color: red;
+    color: white;
     text-align: center;
   }
   
+  .grid-container {
+      display: grid;
+      grid-template-columns: 1fr; 
+      grid-gap: 1rem; 
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    
+    
+    .grid-item {
+      display: flex; 
+      background-color: #064917;
+      padding: 20px;
+      border: 1px solid #ccc; 
+      box-sizing: border-box;
+    }
+    
+  
+    .grid-text { /* I learned about getting text to flow better in this section with things like border box and flex directions */
+      width: 66%;
+      background-color: #fff3e0;
+      padding: 1rem;
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+   
+    .grid-image { /* fred learned about shading and creating soft edges on grid boxes, this was not something that I knew before */
+      width: 33%;
+      background-color: #e0f7fa;
+      padding: 1rem; /* I learned about using rem as a measurement */
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* I learned about making shadows on boxes */
+    }
+    
+    
+    .grid-image img { /*I learned about how to get the image to fit properly in its designated section */
+      width: 100%; 
+      height: auto; 
+    }
+    
+    h3 {
+      text-align: left;
+      font-family: Arial;
+      color:#064917
+    }
+    
+    .video-section { 
+      display: flexbox;
+      justify-content: center;  
+      align-items: center;
+  }  
