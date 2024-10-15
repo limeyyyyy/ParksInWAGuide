@@ -111,7 +111,13 @@ h1 {
     h3 {
       text-align: left;
       font-family: Arial;
-      color:#064917
+      color:#115f25;
+    }
+
+    h4 {
+      text-align: center;
+      font-family: Arial;
+      color:#115f25;
     }
     
     .video-section { 
