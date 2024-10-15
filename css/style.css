@@ -1,33 +1,5 @@
 body{
-    background-color: #7d9b67;
-}
-
-h1{
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    background-color: #578139;
-
-    font-family: "bomboniere", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.grid-container{
-    display:grid;
-    grid-gap: 10px;
-    grid-template-columns: 33.333% 33.333% 33.333%;
-}
-
-.grid-item{
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    background-color: #3f7041;
-
-    font-family: "bomboniere", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    background-color: aliceblue;
 }
 
 .centeredimage{
@@ -41,7 +13,7 @@ h1{
 
 .nav {
     list-style-type: none;
-    background-color: #578139;
+    background-color: darkcyan;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -57,81 +29,73 @@ ul.nav li a {
     text-decoration: none;
 }
 ul.nav a:hover {
-    background-color: #445b3a;
+    background-color: rgb(2, 87, 87);
     color: white;
 }
 .active {
-    background-color: #91a97c;
+    background-color: aqua;
 }
-
-
-.topic1title{
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.topic1text{
-    grid-column: 2 / span 2;
-    grid-row:  2 / span 3;
-}
-
-.topic1img{
-    grid-column: 1;
-    grid-row: 3 / span 2;
-}
-
-.topic2title{
-    grid-column: 3;
-    grid-row: 5;
-}
-
-.topic2text{
-    grid-column: 1 / span 2;
-    grid-row:  5 / span 3;
-}
-
-.topic2img{
-    grid-column: 3;
-    grid-row: 6 / span 2;
-}
-
-.topic3title{
-    grid-column: 1;
-    grid-row: 8;
-}
-
-.topic3text{
-    grid-column: 2 / span 2;
-    grid-row:  8 / span 3;
-}
-
-.topic3img{
-    grid-column: 1;
-    grid-row: 9 / span 2;
-}
-
-.topic4title{
-    grid-column: 3;
-    grid-row: 12;
-}
-
-.topic4text{
-    grid-column: 1 / span 2;
-    grid-row: 12/ span 3;
-}
-
-.topic4img{
-    grid-column: 3;
-    grid-row: 13 / span 2;
-}
-
 
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #5c5a45;
-    color: black;
+    background-color: red;
+    color: white;
     text-align: center;
   }
+  /* Container for the grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column grid (each item is full width) */
+  grid-gap: 1rem; /* Adjust the spacing between items */
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Each grid item */
+.grid-item {
+  display: flex; /* Use flex to align text and image in a row */
+  background-color: #f0f0f0; /* Example background color */
+  padding: 20px;
+  border: 1px solid #ccc; /* Border to highlight the grid items */
+  box-sizing: border-box;
+}
+
+/* Text section inside the grid item */
+.grid-text {
+  width: 66%; /* Takes up 66% of the width */
+  padding-right: 1rem; /* Space between text and image */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text vertically */
+}
+
+/* Image section inside the grid item */
+.grid-image {
+  width: 33%; /* Takes up 33% of the width */
+}
+
+.grid-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Keep the aspect ratio */
+}
+
+/* Responsive adjustments (for small screens) */
+@media (max-width: 768px) {
+  .grid-item {
+    flex-direction: column; /* Stack the text and image vertically on small screens */
+  }
+
+  .grid-text, .grid-image {
+    width: 100%; /* Each section takes full width on small screens */
+  }
+
+  .grid-text {
+    padding-right: 0; /* Remove padding on small screens */
+  }
+}
