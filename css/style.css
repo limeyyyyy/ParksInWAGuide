@@ -59,3 +59,58 @@ ul.nav a:hover {
     color: white;
     text-align: center;
   }
+  /* Container for the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column grid (each item is full width) */
+    grid-gap: 1rem; /* Adjust the spacing between items */
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Each grid item */
+  .grid-item {
+    display: flex; /* Use flex to align text and image in a row */
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px;
+    border: 1px solid #ccc; /* Border to highlight the grid items */
+    box-sizing: border-box;
+  }
+  
+  /* Text section inside the grid item */
+  .grid-text {
+    width: 66%; /* Takes up 66% of the width */
+    padding-right: 1rem; /* Space between text and image */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+  }
+  
+  /* Image section inside the grid item */
+  .grid-image {
+    width: 33%; /* Takes up 33% of the width */
+  }
+  
+  .grid-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Keep the aspect ratio */
+  }
+  
+  /* Responsive adjustments (for small screens) */
+  @media (max-width: 768px) {
+    .grid-item {
+      flex-direction: column; /* Stack the text and image vertically on small screens */
+    }
+  
+    .grid-text, .grid-image {
+      width: 100%; /* Each section takes full width on small screens */
+    }
+  
+    .grid-text {
+      padding-right: 0; /* Remove padding on small screens */
+    }
+  }
+  
