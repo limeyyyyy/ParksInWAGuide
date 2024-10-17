@@ -47,7 +47,7 @@ h1 {
     background-color: rgb(4, 65, 2);
     color: white;
   }
-  .active { /* Fred learned how to differentiate active page */
+  .active {
     background-color: rgb(41, 56, 3);
   }
   
@@ -71,7 +71,7 @@ h1 {
       box-sizing: border-box;
     }
     
-    
+    /*learned how to make boxes allign themselves without grid*/
     .grid-item {
       display: flex; 
       background-color: #064917;
@@ -131,6 +131,7 @@ h1 {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    color: white;
   }
   
   td, th {
@@ -140,6 +141,6 @@ h1 {
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #064917;
   }
   
