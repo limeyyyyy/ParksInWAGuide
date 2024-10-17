@@ -11,6 +11,62 @@
             position: fixed;
             bottom: 0px;
         }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(49, 45, 34, 0.538);
+            border-top-left-radius: 20px; /*New CSS Style*/
+            border-top-right-radius: 20px; /*New CSS Style*/
+            color: white; 
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .grid-itemy {
+            display: flex; 
+            background-color: #064917;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2f1e0c;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease; /*New CSS Style*/
+            border-radius: 5px;
+        }
+        
+        .container:hover .overlay {
+            width: 100%;
+        }
+        /*NEW FEATURE*/
+        /*Hover animation*/
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%); /*New CSS Style*/
+            -ms-transform: translate(-50%, -50%); /*New CSS Style*/
+            transform: translate(-50%, -50%); /*New CSS Style*/
+            white-space: nowrap; /*New CSS Style*/
+        }
     </style>
 </head>
 <body>
@@ -27,17 +83,26 @@
         <div class="grid-container">
 
 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
-                    <h2>Sammamish Library Park Thing</h2>
-                    <p>description</p>
+                    <h2>Sammamish Commons Park</h2>
+                    <p>
+                        Sammamish Commons Park is a popular community park in Sammamish, Washington. 
+                        It features a blend of open green spaces, wooded areas, and well-maintained trails. 
+                        The park offers a variety of recreational amenities, including sports fields, playgrounds, 
+                        picnic areas, and walking paths that provide scenic views of the surrounding natural beauty. 
+                        It also houses a community garden and a skate park, 
+                        making it a favorite destination for families and outdoor enthusiasts. 
+                        Sammamish Commons is often used for local events and gatherings, 
+                        offering a peaceful setting with a connection to the area's natural environment.
+                    </p>
                 </div>
                 <div class="grid-image">
                 </div>
             </div>
 
                 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Yellow Lake Park</h2>
                     <p>description</p>
@@ -47,7 +112,7 @@
                 </div>
             </div>
         
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Big Rock Park</h2>
                     <p>description</p>

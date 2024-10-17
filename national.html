@@ -7,62 +7,66 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/voh4ibm.css">
     <style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgba(49, 45, 34, 0.538);
-        border-top-left-radius: 20px; /*New CSS Style*/
-        border-top-right-radius: 20px; /*New CSS Style*/
-        color: white; 
-        text-align: center;
-    }
-    .container {
-        position: relative;
-        width: 50%;
-    }
-    .grid-itemy {
-        display: flex; 
-        background-color: #064917;
-        padding: 20px;
-        box-sizing: border-box;
-        border-radius: 20px;
-    }
-    .image {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    .overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #2f1e0c;
-        overflow: hidden;
-        width: 0;
-        height: 100%;
-        transition: .5s ease; /*New CSS Style*/
-        border-radius: 5px;
-    }
-    
-    .container:hover .overlay {
-        width: 100%;
-    }
-    /*NEW FEATURE*/
-    /*Hover animation*/
-    .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%); /*New CSS Style*/
-        -ms-transform: translate(-50%, -50%); /*New CSS Style*/
-        transform: translate(-50%, -50%); /*New CSS Style*/
-        white-space: nowrap; /*New CSS Style*/
-    }
+        .stay {
+            position: fixed;
+            bottom: 0px;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(49, 45, 34, 0.538);
+            border-top-left-radius: 20px; /*New CSS Style*/
+            border-top-right-radius: 20px; /*New CSS Style*/
+            color: white; 
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .grid-itemy {
+            display: flex; 
+            background-color: #064917;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2f1e0c;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease; /*New CSS Style*/
+            border-radius: 5px;
+        }
+        
+        .container:hover .overlay {
+            width: 100%;
+        }
+        /*NEW FEATURE*/
+        /*Hover animation*/
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%); /*New CSS Style*/
+            -ms-transform: translate(-50%, -50%); /*New CSS Style*/
+            transform: translate(-50%, -50%); /*New CSS Style*/
+            white-space: nowrap; /*New CSS Style*/
+        }
     </style>
 </head>
 <body>
