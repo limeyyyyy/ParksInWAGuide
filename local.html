@@ -11,6 +11,62 @@
             position: fixed;
             bottom: 0px;
         }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(49, 45, 34, 0.538);
+            border-top-left-radius: 20px; /*New CSS Style*/
+            border-top-right-radius: 20px; /*New CSS Style*/
+            color: white; 
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .grid-itemy {
+            display: flex; 
+            background-color: #064917;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2f1e0c;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease; /*New CSS Style*/
+            border-radius: 5px;
+        }
+        
+        .container:hover .overlay {
+            width: 100%;
+        }
+        /*NEW FEATURE*/
+        /*Hover animation*/
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%); /*New CSS Style*/
+            -ms-transform: translate(-50%, -50%); /*New CSS Style*/
+            transform: translate(-50%, -50%); /*New CSS Style*/
+            white-space: nowrap; /*New CSS Style*/
+        }
     </style>
 </head>
 <body>
@@ -27,42 +83,113 @@
         <div class="grid-container">
 
 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
-                    <h2>Sammamish Library Park Thing</h2>
-                    <p>description</p>
+                    <h2>Sammamish Commons Park</h2>
+                    <p>
+                        Sammamish Commons Park is a popular community park in Sammamish, Washington. 
+                        It features a blend of open green spaces, wooded areas, and well-maintained trails. 
+                        The park offers a variety of recreational amenities, including sports fields, playgrounds, 
+                        picnic areas, and walking paths that provide scenic views of the surrounding natural beauty. 
+                        It also houses a community garden and a skate park, 
+                        making it a favorite destination for families and outdoor enthusiasts. 
+                        Sammamish Commons is often used for local events and gatherings, 
+                        offering a peaceful setting with a connection to the area's natural environment.
+                    </p>
                 </div>
-                <div class="grid-image">
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/sammamish.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>"Sammamish Commons</p> 
+                            <p>Park Playground"</p>
+                            <p>Taken by <a target="_blank" href="https://www.sammamish.us/our-community/recreation/parks-trails/sammamish-commons/#&gid=1&pid=4">City of Sammamish</a></p></div>
+                    </div>
                 </div>
             </div>
 
                 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Yellow Lake Park</h2>
-                    <p>description</p>
+                    <p>The Yellow Lake Loop Trail, located in the Klahanie neighborhood of Sammamish, Washington, 
+                        is a serene and accessible nature trail that circles the scenic Yellow Lake. 
+                        This loop trail offers an easy walk through a lush, forested environment, 
+                        with views of the calm lake at its center. The path is well-maintained, 
+                        making it suitable for walkers of all ages and skill levels. Along the trail, 
+                        visitors can enjoy the natural beauty of the Pacific Northwest, including native plants, 
+                        birds, and other wildlife. It's a peaceful spot for locals to relax, take a leisurely stroll, 
+                        or walk their dogs. The trail provides a refreshing break from the suburban surroundings and 
+                        is especially beautiful during the fall when the foliage changes color.
+                    </p>
                 </div>
-                <div class="grid-image">
-                    
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/lake.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>"Yellow Lake</p> 
+                            <p>Loop Trail"</p>
+                            <p>Taken by <a target="_blank" href="https://www.mypacer.com/routes/130032/yellow-lake-loop-trail-at-klahanie-sammamish-wa-issaquah-washington-usa">Pacer</a></p></div>
+                    </div>
                 </div>
             </div>
         
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Big Rock Park</h2>
-                    <p>description</p>
+                    <p>Big Rock Park is a scenic and peaceful park located in Sammamish, Washington. 
+                        The park is known for its natural beauty, featuring towering trees, open meadows, 
+                        and the park's namesake—an enormous glacial erratic, or "big rock," that serves 
+                        as a geological point of interest. Visitors to Big Rock Park can enjoy hiking 
+                        along well-maintained trails that wind through forests and wetlands, offering a
+                         quiet retreat in nature. The park also has picnic areas, interpretive signs, 
+                         and educational opportunities, making it a family-friendly destination. It's 
+                         a favorite for those looking to explore the outdoors, go birdwatching, or 
+                         simply enjoy a tranquil setting.
+                    </p>
                 </div>
-                <div class="grid-image">
-                    
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/rock.jpeg">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>"Hiking Big Rock
+                            </p> 
+                            <p>Park - North"</p>
+                            <p>Taken by <a target="_blank" href="https://www.wta.org/go-hiking/hikes/big-rock-trail">WA Trails</a></p></div>
+                    </div>
                 </div>
             </div>
 
 
             <div class="video-section">
-                <h3>See this comparison between these parks:</h3>
-                <p>Insert table here.</p>
+                <h3>See this comparison between the parks:</h3>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Main Attraction</th>
+                      </tr>
+                      <tr>
+                        <th>Sammamish Commons Park</th>
+                        <th>Sammamish, WA</th>
+                        <th>Public Gatherings &amp; Recreation</th>
+                      </tr>
+                      <tr>
+                        <th>Yellow Lake Trail</th>
+                        <th>Klahine, WA</th>
+                        <th>Hiking</th>
+                      </tr>
+                      <tr>
+                        <th>Big Rock Park - North</th>
+                        <th>Sammamish, WA</th>
+                        <th>Hiking &amp; Recreation</th>
+                      </tr>
+                    </thead>
+                  </table>
             </div>
     </div>
+    <p>⠀</p>
     <div class="footer stay"> 
         <p>This page is by Yan Levin.</p>
     </div>

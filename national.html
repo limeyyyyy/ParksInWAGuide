@@ -6,6 +6,68 @@
     <title>National Parks</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/voh4ibm.css">
+    <style>
+        .stay {
+            position: fixed;
+            bottom: 0px;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(49, 45, 34, 0.538);
+            border-top-left-radius: 20px; /*New CSS Style*/
+            border-top-right-radius: 20px; /*New CSS Style*/
+            color: white; 
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .grid-itemy {
+            display: flex; 
+            background-color: #064917;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2f1e0c;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease; /*New CSS Style*/
+            border-radius: 5px;
+        }
+        
+        .container:hover .overlay {
+            width: 100%;
+        }
+        /*NEW FEATURE*/
+        /*Hover animation*/
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%); /*New CSS Style*/
+            -ms-transform: translate(-50%, -50%); /*New CSS Style*/
+            transform: translate(-50%, -50%); /*New CSS Style*/
+            white-space: nowrap; /*New CSS Style*/
+        }
+    </style>
 </head>
 <body>
     <h1>National Parks</h1>
@@ -21,40 +83,95 @@
         <div class="grid-container">
 
 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
-                    <h2>Glacier National Park</h2>
-                    <p>description</p>
+                    <h2>Grand Canyon National Park</h2>
+                    <p>Grand Canyon National Park, in northern Arizona, 
+                        is one of the most well known natural wonders in the United States. 
+                        It features the Grand Canyon, 
+                        a massive gorge carved over millions of years by the Colorado River. 
+                        The canyon stretches 277 miles in length, 
+                        18 miles wide, and over a mile deep, 
+                        showcasing stunning layers of red, orange, 
+                        and pink rock formations that show Earth's geological history. 
+                        The park offers breathtaking views, hiking trails, 
+                        and opportunities for rafting and wildlife observation. 
+                        It's a UNESCO World Heritage Site and draws millions of visitors annually.
+                    </p>
                 </div>
-                <div class="grid-image">
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/grand_canyon.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>"View from Hopi Point over </p> 
+                            <p>Grand Canyon with rainbow"</p>
+                            <p>Taken by <a target="_blank" href="https://commons.wikimedia.org/wiki/User:Tuxyso">Tuxyso</a></p></div>
+                    </div>
                 </div>
             </div>
 
                 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Sequoia National Park</h2>
-                    <p>description</p>
+                    <p>Sequoia National Park, in California's southern Sierra Nevada mountains, 
+                        is renowned for its giant sequoia trees, including the largest tree on Earth by volume, 
+                        the General Sherman Tree. Created in 1890, 
+                        the park protects vast groves of these ancient trees, 
+                        some of which are thousands of years old. In addition to the towering sequoias, 
+                        the park features rugged mountain landscapes, deep canyons, and scenic rivers. 
+                        Visitors can explore a range of activities, 
+                        from hiking through lush forests to climbing high-altitude peaks, 
+                        including Mount Whitney, the tallest mountain in the contiguous U.S. 
+                        The park is also home to diverse wildlife and stunning alpine scenery.
+
+                    </p>
                 </div>
-                <div class="grid-image">
-                    
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/trees.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>"Sequioa Giants, Yosemite's Mariposa Grove,</p>
+                            <p>California--United States"</p>
+                            <p>Taken by <a target="_blank" href="https://commons.wikimedia.org/w/index.php?title=User:Robert_Brett&action=edit&redlink=1">Robert Brett</a></p></div>
+                    </div>
                 </div>
             </div>
         
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Haleakalā National Park</h2>
-                    <p>description</p>
+                    <p>Haleakalā National Park, on the island of Maui in Hawaii, 
+                        is known for its striking volcanic landscapes and unique ecosystems. 
+                        The park encompasses the massive Haleakalā Crater, 
+                        a dormant volcano that rises over 10,000 feet above sea level, 
+                        offering breathtaking views at sunrise and sunset. 
+                        The summit area features otherworldly landscapes of red, orange, 
+                        and black volcanic rock, cinder cones, and lava fields. 
+                        In contrast, the park's lush coastal region, known as the Kīpahulu District, 
+                        is rich with waterfalls, tropical rainforests, and the famous Pools of 'Ohe'o. 
+                        The park is home to rare plants and wildlife, some found nowhere else on Earth, 
+                        making it a must-go for nature lovers, hikers, and stargazers.</p>
                 </div>
-                <div class="grid-image">
-                    
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/mountain.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>"Pu'u 'Ula'ula Haleakalā Haleakala</p> 
+                            <p>National Park Maui Hawaii"</p>
+                            <p>Taken by <a target="_blank" href="https://commons.wikimedia.org/wiki/User:Tony_Webster">Tony Webster</a></p></div>
+                    </div>
                 </div>
             </div>
 
 
             <div class="video-section">
                 <h3>See this video about National Parks::</h3>
-                <p>Insert video here.</p>
+                <iframe width="1120" height="630" src="https://www.youtube.com/embed/XJasV-itdoc?si=4A9liyM-06y1BlzH" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen style="border-radius: 20px;"></iframe>
+                <p>⠀</p>
             </div>
     </div>
     <div class="footer stay"> 
