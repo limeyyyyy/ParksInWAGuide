@@ -6,6 +6,52 @@
     <title>National Parks</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/voh4ibm.css">
+    <style>
+    .container {
+        position: relative;
+        width: 50%;
+    }
+    .grid-itemy {
+        display: flex; 
+        background-color: #064917;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ff8800;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+        border-radius: 5px;
+    }
+    
+    .container:hover .overlay {
+        width: 100%;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+    </style>
 </head>
 <body>
     <h1>National Parks</h1>
@@ -21,7 +67,7 @@
         <div class="grid-container">
 
 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Grand Canyon National Park</h2>
                     <p>Grand Canyon National Park, in northern Arizona, 
@@ -37,22 +83,31 @@
                         It's a UNESCO World Heritage Site and draws millions of visitors annually.
                     </p>
                 </div>
-                <div class="grid-image">
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/grand_canyon.jpg">
+                    <div class="overlay">
+                        <div class="text"><p>"View from Hopi Point over Grand Canyon with rainbow"</p> 
+                            <p>Taken by <a href="https://commons.wikimedia.org/wiki/User:Tuxyso">Tuxyso</a></p></div>
+                    </div>
                 </div>
             </div>
 
                 
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Sequoia National Park</h2>
                     <p>description</p>
                 </div>
-                <div class="grid-image">
-                    
+                <div class="grid-image container">
+                    <img style="border-radius: 2.5px;" src="images/grand_canyon.jpg">
+                    <div class="overlay">
+                        <div class="text"><p>"View from Hopi Point over Grand Canyon with rainbow"</p> 
+                            <p>Taken by <a href="https://commons.wikimedia.org/wiki/User:Tuxyso">Tuxyso</a></p></div>
+                    </div>
                 </div>
             </div>
         
-            <div class="grid-item">
+            <div class="grid-itemy">
                 <div class="grid-text">
                     <h2>Haleakalā National Park</h2>
                     <p>description</p>
